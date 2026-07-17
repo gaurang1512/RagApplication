@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.env
+env/
+venv/
+.venv/
+.idea/
+.vscode/
+.DS_Store
+faiss_store/
+notebook/data/vectore_store/

@@ -3,9 +3,10 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer
 import numpy as np
 from src.data_loader import load_all_documents
+from dotenv import EMBEDDING_MODEL,CHUNK_SIZE,CHUNK_OVERLAP
 
 class EmbeddingPipeline:
-    def __init__(self, model_name: str = "all-MiniLM-L6-v2", chunk_size: int = 1000, chunk_overlap:int =200):
+    def __init__(self, model_name: str = EMBEDDING_MODEL, chunk_size: int = CHUNK_SIZE, chunk_overlap:int =CHUNK_OVERLAP):
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         self.model = SentenceTransformer(model_name)

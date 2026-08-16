@@ -5,9 +5,9 @@ import pickle
 from typing import List, Any
 from sentence_transformers import SentenceTransformer
 from src.embedding import EmbeddingPipeline
-
+from dotenv import VECTORSTORE_PATH,EMBEDDING_MODEL
 class FaissVectorStore:
-    def __init__(self, persist_dir: str = "faiss_store", embedding_model: str = "all-MiniLM-L6-v2",chunk_size:int=2000,chunk_overlap:int=200):
+    def __init__(self, persist_dir: str = VECTORSTORE_PATH, embedding_model: str = EMBEDDING_MODEL,chunk_size:int=2000,chunk_overlap:int=200):
         self.persist_dir = persist_dir
         os.makedirs(self.persist_dir, exist_ok=True)
         self.index = None

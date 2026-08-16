@@ -1,3 +1,33 @@
+# Byte-compiled / cached
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# Data and large files
+data/
+faiss_store/
+notebook/data/
+*.sqlite3
+*.index
+
+# Editor and OS files
+.vscode/
+*.sublime-workspace
+*.sublime-project
+Thumbs.db
+.DS_Store
+
+# Logs
+.log
+
+# Ignore compiled C extensions
+*.so
 __pycache__/
 *.py[cod]
 *.pyo
